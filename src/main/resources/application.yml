@@ -1,0 +1,50 @@
+#management.security.enabled=false
+#management:
+#    cloudfoundry:
+#        enabled: false
+#    server:
+#        port: 9001
+#    security:
+#        enabled:false
+#接口端口
+server:
+  port: 8082
+#监控配置 不懂什么鬼
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+      port: 9001
+      servlet:
+        context-path: /
+      ssl:
+        enabled: false
+  endpoint:
+    health:
+      show-details: always
+#数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/lsp?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: asd1230.0
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+mybatis:
+  typeAliasesPackage: com.lsp.helloworld
+  mapperLocations: classpath:mapper/*.xml
