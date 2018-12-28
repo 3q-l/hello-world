@@ -1,4 +1,4 @@
-package com.lsp.helloworld.test;
+package com.lsp.helloworld.controller;
 
 import com.lsp.helloworld.DBConnector;
 import com.lsp.helloworld.common.ErrorCode;
@@ -7,6 +7,7 @@ import com.lsp.helloworld.service.RedisService;
 import com.lsp.helloworld.dto.UserDTO;
 import com.lsp.helloworld.entity.LOrder;
 import com.lsp.helloworld.service.OrderService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +32,7 @@ public class TestController {
     @Autowired
     private RedisService redisService;
 
+    @ApiOperation(value = "测试接口" ,notes = "测试接口")
     @GetMapping("hi")
     public String hi(){
         log.info("你好");
@@ -39,6 +41,7 @@ public class TestController {
                 + user.getValue() +"随机:"+user.getNumber();
     }
 
+    @ApiOperation(value = "订单详情" ,notes = "根据订单编码获取订单详情")
     @RequestMapping(value = "orderSn/{orderSn}", method = RequestMethod.GET)
     public Response order(@PathVariable("orderSn") String orderSn){
         LOrder order = orderService.getOrder(orderSn);
