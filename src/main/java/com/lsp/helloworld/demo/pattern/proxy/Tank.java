@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.proxy;
+package com.lsp.helloworld.demo.pattern.proxy;
 
 
 import java.lang.reflect.InvocationHandler;

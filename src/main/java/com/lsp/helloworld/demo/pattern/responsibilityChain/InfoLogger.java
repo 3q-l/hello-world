@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.responsibilityChain;
+package com.lsp.helloworld.demo.pattern.responsibilityChain;
 
 /**
  * Created by lisp on 2020/5/28/上午11:36.

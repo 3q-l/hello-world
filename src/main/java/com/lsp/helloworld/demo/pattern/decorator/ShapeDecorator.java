@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.decorator;
+package com.lsp.helloworld.demo.pattern.decorator;
 
 /**
  * 装饰类

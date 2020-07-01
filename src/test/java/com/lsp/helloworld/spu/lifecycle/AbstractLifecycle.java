@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.spu.lifecycle;
 
 /**
  * @author lsp
@@ -6,17 +6,17 @@ package com.lsp.helloworld.spu;
  */
 public class AbstractLifecycle implements ILifecycle {
     @Override
-    public void init() {
+    public void init() throws Exception  {
 
     }
 
     @Override
-    public void start() {
+    public void start() throws Exception  {
 
     }
 
     @Override
-    public void close() {
+    public void stop() {
 
     }
 }

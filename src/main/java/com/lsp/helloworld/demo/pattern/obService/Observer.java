@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.obService;
+package com.lsp.helloworld.demo.pattern.obService;
 
 /**
  * 观察者类

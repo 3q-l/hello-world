@@ -1,4 +1,4 @@
-package com.lsp.helloworld.jvm.v1;
+package com.lsp.helloworld.demo.jvm.v1;
 
 /**
  * Created by lisp on 2020/6/2/上午10:35.

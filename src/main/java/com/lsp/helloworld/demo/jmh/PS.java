@@ -1,4 +1,4 @@
-package com.lsp.helloworld.jmh;
+package com.lsp.helloworld.demo.jmh;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class PS {
         nums.forEach(v -> isPrime(v));
     }
 
-    static void parallel(){
+    public static void parallel(){
         nums.parallelStream().forEach(PS::isPrime);
     }
 

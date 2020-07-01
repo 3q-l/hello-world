@@ -1,4 +1,4 @@
-package com.lsp.helloworld.jvm.v2;
+package com.lsp.helloworld.demo.jvm.v2;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

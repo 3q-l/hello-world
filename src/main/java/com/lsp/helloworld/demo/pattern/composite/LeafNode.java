@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.composite;
+package com.lsp.helloworld.demo.pattern.composite;
 
 /**
  * Created by lisp on 2020/5/29/下午6:04.

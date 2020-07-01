@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.spu.bean;
 
 import lombok.Data;
 

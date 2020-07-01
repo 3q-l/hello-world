@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.memento;
+package com.lsp.helloworld.demo.pattern.memento;
 
 /**
  * Created by lisp on 2020/6/1/下午3:18.

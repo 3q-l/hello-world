@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.composite;
+package com.lsp.helloworld.demo.pattern.composite;
 
 /**
  * 组合模式
@@ -32,7 +32,7 @@ public class CompositePattern {
         tree(root,0);
     }
 
-    public static void tree(Node node,Integer depth){
+    public static void tree(Node node, Integer depth){
         for (Integer i = 0; i <= depth; i++) {
             System.out.print("--");
         }

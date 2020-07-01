@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.composite;
+package com.lsp.helloworld.demo.pattern.composite;
 
 import java.util.ArrayList;
 import java.util.List;

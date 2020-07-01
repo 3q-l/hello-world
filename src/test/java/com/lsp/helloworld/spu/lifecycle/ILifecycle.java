@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.spu.lifecycle;
 
 /**
  * @author lsp
@@ -12,7 +12,7 @@ public interface ILifecycle {
      * @date 2020/6/18 12:26 AM
      * @return
      */
-    void init();
+    void init() throws Exception ;
 
     /**
      * 启动
@@ -20,7 +20,7 @@ public interface ILifecycle {
      * @date 2020/6/18 12:27 AM
      * @return
      */
-    void start();
+    void start() throws Exception ;
 
     /**
      * 关闭
@@ -28,5 +28,5 @@ public interface ILifecycle {
      * @date 2020/6/18 12:27 AM
      * @return
      */
-    void close();
+    void stop()  ;
 }

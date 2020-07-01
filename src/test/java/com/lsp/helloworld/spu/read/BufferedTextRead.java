@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.spu.read;
 
 import com.lsp.helloworld.spu.lifecycle.AbstractLifecycle;
 
@@ -10,8 +10,8 @@ import java.io.*;
  */
 public class BufferedTextRead extends AbstractLifecycle implements ITextRead,Closeable {
 
-    public String path;
-    public BufferedReader bufferedReader;
+    private String path;
+    private BufferedReader bufferedReader;
 
     public BufferedTextRead(String path) {
         this.path = path;

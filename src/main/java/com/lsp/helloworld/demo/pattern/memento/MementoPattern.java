@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.memento;
+package com.lsp.helloworld.demo.pattern.memento;
 
 /**
  * 备忘录模式

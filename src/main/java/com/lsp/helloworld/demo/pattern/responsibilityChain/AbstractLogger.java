@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.responsibilityChain;
+package com.lsp.helloworld.demo.pattern.responsibilityChain;
 
 /**
  * 日志责任链 根据不同的日志级别输出不同的日志

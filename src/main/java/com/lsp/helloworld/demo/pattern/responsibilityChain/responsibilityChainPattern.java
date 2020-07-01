@@ -1,4 +1,4 @@
-package com.lsp.helloworld.pattern.responsibilityChain;
+package com.lsp.helloworld.demo.pattern.responsibilityChain;
 
 /**
  * 责任链模式

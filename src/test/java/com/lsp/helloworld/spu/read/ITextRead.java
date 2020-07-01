@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.spu.read;
 
 import com.lsp.helloworld.spu.lifecycle.ILifecycle;
 
