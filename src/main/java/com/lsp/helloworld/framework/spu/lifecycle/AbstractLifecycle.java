@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu.lifecycle;
+package com.lsp.helloworld.framework.spu.lifecycle;
 
 /**
  * @author lsp

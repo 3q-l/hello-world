@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.framework.spu;
 
 /**
  * @author lsp
@@ -13,12 +13,12 @@ public class StopWitch {
         start = System.currentTimeMillis();
     }
 
-    public void end(){
+    public void print(){
         end = System.currentTimeMillis();
         witch();
     }
 
-    public void witch(){
+    private void witch(){
         System.out.println(end - start +"ms");
     }
 }

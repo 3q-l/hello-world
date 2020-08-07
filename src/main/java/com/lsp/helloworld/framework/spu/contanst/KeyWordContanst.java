@@ -1,4 +1,4 @@
-package com.lsp.helloworld.spu.contanst;
+package com.lsp.helloworld.framework.spu.contanst;
 
 /**
  * @author lsp

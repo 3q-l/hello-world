@@ -1,6 +1,6 @@
-package com.lsp.helloworld.spu.read;
+package com.lsp.helloworld.framework.spu.read;
 
-import com.lsp.helloworld.spu.lifecycle.ILifecycle;
+import com.lsp.helloworld.framework.spu.lifecycle.ILifecycle;
 
 /**
  * @author lsp

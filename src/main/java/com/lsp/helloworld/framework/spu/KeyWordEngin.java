@@ -1,12 +1,12 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.framework.spu;
 
-import com.lsp.helloworld.spu.lifecycle.AbstractLifecycle;
-import com.lsp.helloworld.spu.parser.FasterJsonParser;
-import com.lsp.helloworld.spu.parser.IJsonParser;
-import com.lsp.helloworld.spu.read.BufferedTextRead;
-import com.lsp.helloworld.spu.read.ITextRead;
-import com.lsp.helloworld.spu.store.IKeyWordStore;
-import com.lsp.helloworld.spu.store.KeyWordStore;
+import com.lsp.helloworld.framework.spu.lifecycle.AbstractLifecycle;
+import com.lsp.helloworld.framework.spu.parser.FasterJsonParser;
+import com.lsp.helloworld.framework.spu.parser.IJsonParser;
+import com.lsp.helloworld.framework.spu.read.BufferedTextRead;
+import com.lsp.helloworld.framework.spu.read.ITextRead;
+import com.lsp.helloworld.framework.spu.store.IKeyWordStore;
+import com.lsp.helloworld.framework.spu.store.KeyWordStore;
 
 /**
  * @author lsp
@@ -14,7 +14,7 @@ import com.lsp.helloworld.spu.store.KeyWordStore;
  */
 public class KeyWordEngin extends AbstractLifecycle {
 
-    private final String path = "/Users/lsp/data/logs/test/json.log";
+    private final String path = "/Users/lsp/data/logs/spu/json.log";
 
     private ITextRead iTextRead = new BufferedTextRead(path);
 
@@ -38,7 +38,7 @@ public class KeyWordEngin extends AbstractLifecycle {
                 }
             });
         }
-        stopWitch.end();
+        stopWitch.print();
     }
 
     @Override

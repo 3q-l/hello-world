@@ -1,26 +1,33 @@
-package com.lsp.helloworld.spu;
+package com.lsp.helloworld.framework.spu;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.lsp.helloworld.spu.bean.SpuBean;
-import com.lsp.helloworld.spu.contanst.KeyWordContanst;
-import com.lsp.helloworld.spu.parser.FasterJsonParser;
-import com.lsp.helloworld.spu.parser.IJsonParser;
-import com.lsp.helloworld.spu.read.BufferedTextRead;
-import com.lsp.helloworld.spu.read.FastTextRead;
-import com.lsp.helloworld.spu.read.ITextRead;
+import com.lsp.helloworld.framework.spu.bean.SpuBean;
+import com.lsp.helloworld.framework.spu.contanst.KeyWordContanst;
+import com.lsp.helloworld.framework.spu.parser.FasterJsonParser;
+import com.lsp.helloworld.framework.spu.parser.IJsonParser;
+import com.lsp.helloworld.framework.spu.read.BufferedTextRead;
+import com.lsp.helloworld.framework.spu.read.FastTextRead;
+import com.lsp.helloworld.framework.spu.read.ITextRead;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.*;
 
 /**
+ * 类es 倒排
  * @author lsp
  * @date 2020/6/18/12:48 AM
  */
 public class KeyWordTest {
 
-    private final String path = "/Users/lsp/data/logs/test/json.log";
+    private static String path ;
+    private static final String ZY_PATH = "/Users/lishuaipeng/data/logs/spu/json.log";
+    private static final String LSP_PATH = "/Users/lsp/data/logs/spu/json.log";
+
+    static {
+        path = ZY_PATH;
+    }
 
     private static void accept(Map.Entry<String, Object> entrySet) {
         String key = entrySet.getKey();
@@ -84,7 +91,9 @@ public class KeyWordTest {
         readS.forEach(System.out::println);
     }
 
-
+    /**
+     * 往文本中写数据
+     */
     @Test
     public void getJson() {
         List<String> keyWordS = new ArrayList<>();
@@ -162,6 +171,6 @@ public class KeyWordTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        stopWitch.end();
+        stopWitch.print();
     }
 }

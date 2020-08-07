@@ -1,6 +1,6 @@
-package com.lsp.helloworld.spu.parser;
+package com.lsp.helloworld.framework.spu.parser;
 
-import com.lsp.helloworld.spu.bean.SpuBean;
+import com.lsp.helloworld.framework.spu.bean.SpuBean;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.lsp.helloworld.spu.read;
+package com.lsp.helloworld.framework.spu.read;
 
-import com.lsp.helloworld.spu.lifecycle.AbstractLifecycle;
+import com.lsp.helloworld.framework.spu.lifecycle.AbstractLifecycle;
 import sun.misc.Cleaner;
 
 import java.io.File;

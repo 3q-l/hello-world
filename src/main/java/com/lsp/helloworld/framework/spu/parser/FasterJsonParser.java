@@ -1,9 +1,9 @@
-package com.lsp.helloworld.spu.parser;
+package com.lsp.helloworld.framework.spu.parser;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.lsp.helloworld.spu.bean.SpuBean;
-import com.lsp.helloworld.spu.contanst.KeyWordContanst;
+import com.lsp.helloworld.framework.spu.bean.SpuBean;
+import com.lsp.helloworld.framework.spu.contanst.KeyWordContanst;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
