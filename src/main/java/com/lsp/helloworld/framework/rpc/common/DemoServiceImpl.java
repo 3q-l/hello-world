@@ -31,5 +31,6 @@ public class DemoServiceImpl implements DemoService {
             Object cast = returnType.cast(obj);
             System.out.println(cast);
         }
+
     }
 }
