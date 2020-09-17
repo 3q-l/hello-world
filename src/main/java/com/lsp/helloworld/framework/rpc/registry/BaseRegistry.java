@@ -32,15 +32,17 @@ import java.util.Map;
 public class BaseRegistry extends AbstractLifecycle implements RegistryConfig {
 
 //    private RegistryCenter registryCenter;
+    private String ip;
     private Integer port;
 
     public BaseRegistry() {
 //        this.registryCenter = new BaseRegistryCenter();
-        this.port = 9090;
+        this("localhost",9090);
     }
 
-    public BaseRegistry (Integer port){
+    public BaseRegistry (String ip,Integer port){
 //        this.registryCenter = registryCenter;
+        this.ip = ip;
         this.port = port;
     }
 
@@ -135,7 +137,7 @@ public class BaseRegistry extends AbstractLifecycle implements RegistryConfig {
                         p.addLast(new ServiceHandler());
                     }
                 })
-                .bind(new InetSocketAddress("localhost", port));
+                .bind(new InetSocketAddress(ip, port));
         System.out.println("service 启动成功。。。。。。");
         bind.sync().channel().closeFuture().sync();
         System.out.println("service 结束。。。。。。");

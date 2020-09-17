@@ -44,7 +44,7 @@ public class TestRpc {
      */
     @Test
     public void startRegistry() throws Exception{
-        RegistryConfig registry = new BaseRegistry(registryPort);
+        RegistryConfig registry = new BaseRegistry();
         registry.init();
         registry.start();
     }
