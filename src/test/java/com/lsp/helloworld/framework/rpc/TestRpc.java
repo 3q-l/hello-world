@@ -40,15 +40,27 @@ public class TestRpc {
 
     /**
      * 启动注册中心
+     *
+     * 演示：
+     *  1、启动注册中心  startRegistry()
+     *  2、往注册中心注册服务 testRegistry() [可以启动多次]
+     *  3、查看注册中心拥有的服务 testLookup()
      * @throws Exception
      */
     @Test
     public void startRegistry() throws Exception{
-        RegistryConfig registry = new BaseRegistry();
+        RegistryConfig registry = new BaseRegistry(ip,9090);
         registry.init();
         registry.start();
     }
 
+    /**
+     * 测试注册
+     *  1、测试的时候可以多启几次
+     *      1-1、该方法会阻塞。建立一个长连接，方便后续数据传输。
+     *      1-2、启动之后，可以直接关闭。注册中心没有做断开链接剔除服务。后续添加剔除服务只需按照ip+port+serviceName剔除即可。
+     * @throws Exception
+     */
     @Test
     public void testRegistry() throws Exception{
         NioEventLoopGroup group = new NioEventLoopGroup(1);
@@ -70,7 +82,7 @@ public class TestRpc {
                         });
                     }
                 })
-                .connect(new InetSocketAddress("localhost", registryPort));
+                .connect(new InetSocketAddress(ip, registryPort));
         Channel client = connect.sync().channel();
         try {
 //            Thread.sleep(5000);
@@ -87,6 +99,10 @@ public class TestRpc {
         client.closeFuture().sync();
     }
 
+    /**
+     * 查询注册中心现有的服务
+     * @throws Exception
+     */
     @Test
     public void testLookup() throws Exception{
         NioEventLoopGroup group = new NioEventLoopGroup(1);
@@ -109,7 +125,7 @@ public class TestRpc {
                         });
                     }
                 })
-                .connect(new InetSocketAddress("localhost", registryPort));
+                .connect(new InetSocketAddress(ip, registryPort));
         Channel client = connect.sync().channel();
         try {
 //            Thread.sleep(5000);
