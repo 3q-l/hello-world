@@ -1,0 +1,63 @@
+<%if(isNotEmpty(classInfo)){%>
+> 名称: ${classInfo.fullName}
+> 描述: ${classInfo.comment}
+> 作者: ${classInfo.author}
+<%if(isNotEmpty(classInfo.date)){%>
+> date: ${classInfo.date}
+<%}%>
+<%if(isNotEmpty(classInfo.since)){%>
+> since: ${classInfo.since}
+<%}%>
+> 生成于: ${createTime}
+<%}%>
+
+<% for(methodInfo in methodInfos){%>
+### ${methodInfo.name}
+#### 功能:
+${methodInfo.comment}
+#### 入参:
+<%if(isNotEmpty(methodInfo.requestClasses)){%>
+字段 | 类型 | 含义
+---|---|---
+<%
+for(requestClass in methodInfo.requestClasses){
+%>
+${requestClass.name}|${requestClass.fullName}|${requestClass.comment}
+<%if(isNotEmpty(requestClass.fieldInfoList)){%>
+<%
+for(rField in requestClass.fieldInfoList){
+%>
+╰${rField.name}|${rField.type}|${rField.comment}
+<%}%>
+<%}%>
+<%}%>
+<%}%>
+#### 出参:
+${methodInfo.responseClass.fullName}
+<%if(isNotEmpty(methodInfo.responseClass.fieldInfoList)){%>
+字段 | 类型 | 含义
+---|---|---
+<%
+for(fieldInfo in methodInfo.responseClass.fieldInfoList){
+%>
+${fieldInfo.name}|${fieldInfo.type}|${fieldInfo.comment}
+<%}%>
+<%}%>
+<%if(isNotEmpty(methodInfo.responseClass.genericClasses)){%>
+<% for(gClass in methodInfo.responseClass.genericClasses){ %>
+泛型:
+${gClass.fullName}
+<%if(isNotEmpty(gClass.fieldInfoList)){%>
+字段 | 类型 | 含义
+---|---|---
+<%
+for(fInfo in gClass.fieldInfoList){
+%>
+${fInfo.name}|${fInfo.type}|${fInfo.comment}
+<%}%>
+<%}%>
+<%}%>
+<%}%>
+
+<%}%>
+
